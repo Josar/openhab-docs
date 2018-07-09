@@ -215,7 +215,21 @@ The label text for the Item in the following example is "Temperature" and the op
 Number Livingroom_Temperature "Temperature [%.1f °C]"
 ```
 
-The label defined for an item can be overwritten by the label definition on a sitemap with the [label]({{base}}/configuration/items.html#item-definition-and-syntax) atribute.
+The label defined for an item can be overwritten by the label definition on a sitemap with the label atribute.
+If the label definition on the item contained label text and state representations these have to be considered seperatly.
+
+```perl
+sitemap demo label="My home automation" {
+    Frame label="Date" {
+        // Overrides label text only, keeps state representation defined by Item
+        Text item=Livingroom_Temperature label="Livingroom"
+        // Overrides label text and sets state representation to be empty, not displayed
+        Text item=Livingroom_Temperature label="Livingroom []"
+        // Overrides label text and state representation
+        Text item=Livingroom_Temperature label="Livingroom [%.2f °F]"
+    }
+}
+```
 
 {: #state}
 ### State
