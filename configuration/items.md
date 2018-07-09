@@ -207,7 +207,8 @@ The label is used to describe an Item in a human-readable way.
 Graphical UIs will display the label when the Item is included, e.g. in [Basic UI]({{base}}/addons/uis/basic/readme.html) in a [Sitemap]({{base}}/configuration/sitemaps.html) definition.
 Some I/O services (e.g. the Amazon Alexa skill) also use the label to match an external voice command to an Item.
 
-In textual configurations the label in quotation marks, contains the label text and the optional state presentation field in square brackets (see below). They will be showed side by side the text left aligned and the state representation right-aligned.
+In textual configurations the label in quotation marks, contains the label text and the optional state presentation field in square brackets (see below).
+They will be showed side by side, the text left aligned and the state representation right-aligned.
 The label text for the Item in the following example is "Temperature" and the optional state representation is set to be displayed e.g as "23.9 °C":
 
 ```java
